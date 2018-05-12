@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/chat_upload"
+        android:layout_width="20dp"
+        android:layout_height="32dp"
+        android:layout_weight="0.15"
+        android:drawableLeft="@android:drawable/ic_menu_camera" />
+
+    <ImageView
+        android:id="@+id/emoticons_button"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_weight="0.15"
+        android:contentDescription="@string/button_description"
+        android:src="@drawable/ic_smiley" />
+
+    <EditText
+        android:id="@+id/msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.85"
+        android:hint="@string/chat_hint"
+        android:inputType="textMultiLine|textNoSuggestions" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:background="#f5f5f5"
+        android:drawableLeft="@android:drawable/ic_menu_send"
+        android:paddingLeft="10dp"
+        android:text="" />
+
+</LinearLayout>

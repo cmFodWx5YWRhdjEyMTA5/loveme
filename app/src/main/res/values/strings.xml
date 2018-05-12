@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="love_me_Banner">ca-app-pub-2108590561691007/7393379578</string>
+    <string name="love_me_Interstitial">ca-app-pub-2108590561691007/4300312372</string>
+
+    <string name="app_name">Love Me</string>
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    <string name="button_description">Emoticons Button</string>
+    <string name="chat_hint">Write a message</string>
+    <string name="post">Post</string>
+    <string name="back">Back</string>
+
+    <style name="DefaultButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#979797</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:shadowColor">#f9f9f9</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+
+    <!-- toolbar Menu items -->
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh...</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="action_visitors">Visitors</string>
+    <string name="action_all">All</string>
+    <string name="action_online">Online</string>
+    <string name="action_new">New</string>
+    <string name="action_user_search">Search</string>
+    <string name="action_profile">Me</string>
+    <string name="action_you_tube">You Tube</string>
+    <string name="app_perms">App Perms</string>
+    <!-- gender Menu items -->
+    <string-array name="user_gender_spinner_dropdown_item">
+        <item>--Choose gender--</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- age Menu items -->
+    <string-array name="user_age_spinner_dropdown_item">
+        <item>--Choose Age--</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+    </string-array>
+
+</resources>

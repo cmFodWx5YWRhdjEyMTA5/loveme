@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+
+        android:padding="1dp" >
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="@style/DefaultButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:drawableLeft="@drawable/sign_up"
+        android:padding="10dp"
+        android:text="Sign Up"
+        android:textColor="#f5f5f5"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnFbLogin"
+        android:layout_toStartOf="@+id/btnFbLogin" />
+
+
+
+    <Button
+        android:id="@+id/btnFbLogin"
+        style="@style/DefaultButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:drawableLeft="@drawable/facebook"
+        android:padding="10dp"
+        android:text="FaceBook"
+        android:textColor="#f5f5f5"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnSingIn"
+        style="@style/DefaultButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:drawableLeft="@drawable/sign_in"
+        android:padding="10dp"
+        android:text="Sign In"
+        android:textColor="#f5f5f5"
+        android:layout_above="@+id/info"
+        android:layout_alignLeft="@+id/btnFbLogin"
+        android:layout_alignStart="@+id/btnFbLogin"
+        android:layout_alignRight="@+id/btnFbLogin"
+        android:layout_alignEnd="@+id/btnFbLogin" />
+
+    <Button
+        android:id="@+id/btnForgotPass"
+        style="@style/DefaultButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/forgot_password"
+        android:padding="10dp"
+        android:text="Forgot password"
+        android:textColor="#f5f5f5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Love App - Meet New People, Make New Friends..."
+
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:layout_above="@+id/btnForgotPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="87dp" />
+
+</RelativeLayout>

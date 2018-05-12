@@ -1,0 +1,181 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_you_tube"
+        android:icon="@drawable/inlove"
+        android:title="@string/action_you_tube"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/refresh_icon"
+        android:title="@string/action_refresh"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_privacy"
+        android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:title="App privacy"
+        android:visible="false"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_rate_app"
+                android:icon="@drawable/favorites"
+                android:title="Rate App"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/action_logout_app"
+                android:icon="@drawable/exit"
+                android:title="Sign Out"
+                app:showAsAction="always" />
+
+            <item
+                android:id="@+id/action_deactivate_app"
+                android:icon="@drawable/deactivate"
+                android:title="Deactivate Account"
+                app:showAsAction="always" />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:title="@string/abc_search_hint"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_all_users"
+                android:icon="@drawable/user"
+                android:title="@string/action_all"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/action_online_users"
+                android:icon="@drawable/online"
+                android:title="@string/action_online"
+                app:showAsAction="always" />
+
+            <item
+                android:id="@+id/action_new_users"
+                android:icon="@drawable/away"
+                android:title="@string/action_new"
+                app:showAsAction="always" />
+
+            <item
+                android:id="@+id/action_user_search"
+                android:icon="@drawable/search"
+                android:title="@string/action_user_search"
+                app:showAsAction="always" />
+
+
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:title="@string/action_settings"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_profile_id"
+                android:icon="@drawable/profile"
+                android:title="@string/action_profile"
+                app:showAsAction="always" />
+
+            <item
+                android:id="@+id/action_visitor_id"
+                android:icon="@drawable/visitors"
+                android:title="@string/action_visitors"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/action_favorite_id"
+                android:icon="@drawable/favorites"
+                android:title="@string/action_favorites"
+                app:showAsAction="always" />
+
+            <item
+                android:id="@+id/action_setting_id"
+                android:icon="@drawable/menu_settings"
+                android:title="@string/action_settings"
+                app:showAsAction="always" />
+
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/action_menu_remove_user"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Delete"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_menu_chat"
+        android:icon="@drawable/notifications"
+        android:title="Chat"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_menu_like"
+        android:icon="@drawable/thumb_up"
+        android:title="Like"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_menu_dislike"
+        android:icon="@drawable/thumb_down"
+        android:title="Dislike"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_menu_exist_photo"
+        android:icon="@drawable/photos"
+        android:title="Exist Photos"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_menu_take_photo"
+        android:icon="@drawable/camera"
+        android:title="Take a photo"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_menu_set_status"
+        android:icon="@drawable/my_state"
+        android:title="My Status"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_menu_edit_profile"
+        android:icon="@drawable/edit_profile"
+        android:title="Edit"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_menu_done"
+        android:icon="@drawable/done"
+        android:title="Done"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+</menu>
