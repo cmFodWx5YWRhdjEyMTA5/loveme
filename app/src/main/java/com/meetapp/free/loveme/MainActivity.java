@@ -186,6 +186,8 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
         ActivityCompat.requestPermissions(this,
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 REQUEST_WRITE_STORAGE);
+
+        reloadUsers();
     }
 
     @Override
@@ -1069,13 +1071,15 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
                 public void onAdLoaded() {
 
                     if (interstitial.isLoaded()) {
-                        checkPermission();
                         interstitial.show();
-
                         IFY.people.clear();
                         startIndex = 0;
                         getAllUsers();
                     }
+                }
+
+                public void onAdClosed(){
+                    checkPermission();
                 }
             });
 

@@ -9,12 +9,15 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.view.ViewPager;
@@ -55,6 +58,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -109,6 +115,7 @@ public class ChatView extends Activity implements AsyncResponse, EmoticonsGridAd
 	private LinearLayout emoticonsCover;
 	private LinearLayout parentLayout;
 	private static final int GALLERY_PICTURE = 1;
+	private static final int COMPRESS = 100 ;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -666,17 +673,60 @@ public class ChatView extends Activity implements AsyncResponse, EmoticonsGridAd
 
 	private void launchUploadFromGallery(Intent data) {
 
-		Uri selectedImageUri = data.getData();
-		imagepath = getPath(selectedImageUri);
-		File imageFile = new File(imagepath);
+		if (Build.VERSION.SDK_INT < 19) {
+			Uri selectedImageUri = data.getData();
+			imagepath = getPath(selectedImageUri);
+			File imageFile = new File(imagepath);
 
-		fileUri = Uri.fromFile(imageFile);
-		IntentHelper.addObjectForKey(fileUri, "file_uri");
+			fileUri = Uri.fromFile(imageFile);
+			IntentHelper.addObjectForKey(fileUri, "file_uri");
 
-		launchUploadActivity(true);
+			launchUploadActivity(true);
+		}
+		else
+		{
+			InputStream imInputStream = null;
+			try {
+				imInputStream = getContentResolver().openInputStream(data.getData());
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			Bitmap bitmap = BitmapFactory.decodeStream(imInputStream);
+			String smallImagePath = saveGalaryImageOnLitkat(bitmap);
 
+			File imageFile = new File(smallImagePath);
+
+			fileUri = Uri.fromFile(imageFile);
+			IntentHelper.addObjectForKey(fileUri, "file_uri");
+
+			launchUploadActivity(true);
+		}
 	}
 
+	private String saveGalaryImageOnLitkat(Bitmap bitmap) {
+		try {
+			File cacheDir;
+			if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
+				cacheDir = new File(Environment.getExternalStorageDirectory(), getResources().getString(R.string.app_name));
+			else
+				cacheDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+			if (!cacheDir.exists())
+				cacheDir.mkdirs();
+			String filename = System.currentTimeMillis() + ".jpg";
+			File file = new File(cacheDir, filename);
+			File temp_path = file.getAbsoluteFile();
+			// if(!file.exists())
+			file.createNewFile();
+			FileOutputStream out = new FileOutputStream(file);
+			bitmap.compress(Bitmap.CompressFormat.JPEG, COMPRESS, out);
+			return file.getAbsolutePath();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+
+	}
 	public String getPath(Uri uri) {
 
 		String res = null;

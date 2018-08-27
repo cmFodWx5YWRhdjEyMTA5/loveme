@@ -9,14 +9,14 @@ android {
             storePassword 'meetapp2017'
         }
     }
-    compileSdkVersion 24
+    compileSdkVersion 26
     buildToolsVersion "23.0.3"
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.meetapp.free.loveme"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 8
+        versionCode 9
         versionName "1.0"
     }
     buildTypes {
