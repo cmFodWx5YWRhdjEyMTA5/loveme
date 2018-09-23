@@ -27,6 +27,11 @@
                 android:title="Rate App"
                 app:showAsAction="always" />
             <item
+                android:id="@+id/action_privacy_police"
+                android:icon="@drawable/forgot_password"
+                android:title="Privacy Police"
+                app:showAsAction="always" />
+            <item
                 android:id="@+id/action_logout_app"
                 android:icon="@drawable/exit"
                 android:title="Sign Out"

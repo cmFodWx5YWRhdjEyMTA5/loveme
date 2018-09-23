@@ -16,7 +16,7 @@ android {
         applicationId "com.meetapp.free.loveme"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 9
+        versionCode 11
         versionName "1.0"
     }
     buildTypes {

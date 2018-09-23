@@ -289,6 +289,13 @@ public class Settings extends AppCompatActivity implements AsyncResponse {
 
         }
 
+        if (id == R.id.action_privacy_police) {
+
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://kazanlachani.com/#/contacts"));
+            startActivity(browserIntent);
+
+        }
+
         if (id == R.id.action_logout_app) {
 
             showAlert("Are you sure you want to exit?");
